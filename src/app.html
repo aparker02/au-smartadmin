@@ -1,11 +1,22 @@
 <template>
   <require from="header.html"></require>
+  <require from="aside.html"></require>
   <require from="nav-bar.html"></require>
+  <require from="main.html"></require>
+  
   <require from="bootstrap/css/bootstrap.css"></require>
-  <header></header>
-  <nav-bar router.bind="router"></nav-bar>
+  <link rel="stylesheet" type="text/css" media="screen" href="src/css/smartadmin-production.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="src/css/smartadmin-skins.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="src/css/style.css">
 
-  <div class="page-host">
-    <router-view></router-view>
-  </div>
+  <header id="header"></header>
+  <aside id="left-panel"></aside>
+  <main id="main" role="main">
+    <div class="page-host">
+      <router-view></router-view>
+    </div>
+  </main>
+  
+  <!--<nav-bar router.bind="router"></nav-bar>-->
+
 </template>
